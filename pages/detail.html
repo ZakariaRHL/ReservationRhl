@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../js/detail.js" type="module" defer></script>
+    <title>Detail</title>
+  </head>
+  <body class="flex flex-row h-screen bg-gray-100">
+    <section class="flex flex-1">
+      <div class="flex-1 relative">
+        <img
+          id="hotelImg"
+          src="../images/hotelNight.jpg"
+          alt="bedRoom"
+          class="w-full h-full object-cover"
+        />
+        <div
+          style="width: 30%; height: 20%"
+          class="flex flex-col justify-center pl-2 absolute bottom-4 right-4"
+        >
+          <div>
+            <i class="fa-solid fa-circle-check text-white text-xl"></i>
+            <span class="text-white pl-2 text-semibold">Free Cancellation</span>
+          </div>
+          <div class="pt-2">
+            <i class="fa-solid fa-mug-hot text-white text-xl"></i
+            ><span class="pl-2 text-white text-semibold"
+              >Breakfast included</span
+            >
+          </div>
+          <div class="pt-2">
+            <i class="fa-solid fa-wifi text-white text-xl"></i
+            ><span class="pl-2 text-white text-semibold">Wifi included</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="margin-top: 10%" class="flex flex-1 flex-col pl-4">
+      <div class="w-full">
+        <div class="w-full">
+          <div
+            id="hotelName"
+            class="flex flex-row items-center text-3xl font-semibold"
+          >
+            Ocean Breeze Retreat
+            <span class="pl-2 text-xl"
+              ><div class="bg-lime-900 text-white rounded-full px-2 py-1">
+                <span><i class="fa-solid fa-star text-yellow-500"></i></span>
+                <span id="hotelRating">4.9</span>
+              </div></span
+            >
+          </div>
+          <div class="flex flex-row items-center pl-2 pt-2">
+            <i class="fa-solid fa-location-dot text-lime-900 text-xl"></i>
+            <span id="hotelLocation" class="pl-2"
+              >Rocky Mountains, Colorado</span
+            >
+          </div>
+        </div>
+      </div>
+      <div style="height: 1px" class="w-full bg-gray-300 mt-4"></div>
+      <div class="mt-4 pl-3">
+        <p id="hotelDesc">
+          <span><i class="fa-solid fa-circle-info text-lime-900"></i></span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat unde
+          atque excepturi id perspiciatis quidem ea aspernatur adipisci aut nemo
+          distinctio, eligendi, architecto, qui cum facilis iste fugiat odit?
+          Rem!
+        </p>
+      </div>
+      <div class="mt-4 pl-3">
+        <p>
+          <span><i class="fa-solid fa-bed text-lime-900"></i></span> Deluxe
+          Room, 1 King Bed
+        </p>
+      </div>
+      <div class="mt-4 pl-3">
+        <div>
+          <span><i class="fa-solid fa-calendar-days text-lime-900"></i></span>
+          <span id="departDate"></span> -- <span id="returnDate"></span>
+        </div>
+      </div>
+      <div class="mt-4 pl-3">
+        <div>
+          <span><i class="fa-solid fa-user text-lime-900"></i></span>
+          <span id="guestVl">0</span>
+        </div>
+      </div>
+      <div class="mt-4 pl-3 w-full flex flex-row items-center justify-end">
+        <div class="text-2xl font-semibold pr-4">
+          Total: $ <span id="hotelPrice">200</span>
+        </div>
+      </div>
+      <div style="height: 1px" class="w-full bg-gray-300 mt-4"></div>
+      <div class="flex flex-row items-center justify-end mt-8 spece">
+        <button
+          id="btn-cancel"
+          class="border-2 border-red-500 text-red-500 w-44 py-2 rounded-full hover:bg-red-500 hover:text-white"
+        >
+          Cancel
+        </button>
+        <button
+          class="bg-lime-900 text-white w-44 py-2 rounded-full ml-3 hover:bg-lime-700"
+        >
+          Book
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
